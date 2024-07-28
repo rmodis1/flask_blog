@@ -17,7 +17,7 @@ def get_post(post_id):
     return post
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Iamasecretkeysosecretnooneknowsaboutmeatall!10109'
+app.config.from_pyfile('config.py')
 
 @app.route('/')
 def index():
